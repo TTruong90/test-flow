@@ -18,17 +18,10 @@
             function() {                  // Callback once framework and app load
                 $Lightning.createComponent(
                     "lightning:flow",    // top-level component of your app
-                    { "textAutotelexAdsId": "4" },    // attributes to set on the component when created
+                    { },    // attributes to set on the component when created
                     "lexcontainer",    // the DOM location to insert the component
                     function(component) {            // API name of the Flow
-                        var inputVariables = [
-                        {
-                            name : 'varAutotelexADSid',
-                            type : 'String',
-                            value : '3'
-                        }
-                        ];
-                        component.startFlow("Custom_Inbound_New_Guest_Appointment", inputVariables);
+                        component.startFlow("Custom_Inbound_New_Guest_Appointment");
                     }
                 );
             },    'https://wensink--wenaccept.sandbox.my.site.com/Afspraak'  // Site endpoint
