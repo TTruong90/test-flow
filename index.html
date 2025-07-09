@@ -21,7 +21,14 @@
                     { "varAutotelexADSid": "4" },    // attributes to set on the component when created
                     "lexcontainer",    // the DOM location to insert the component
                     function(component) {            // API name of the Flow
-                        component.startFlow("Custom_Inbound_New_Guest_Appointment");
+                        var inputVariables = [
+                        {
+                            name : 'varAutotelexADSid',
+                            type : 'String',
+                            value : '3'
+                        }
+                        ];
+                        component.startFlow("Custom_Inbound_New_Guest_Appointment", inputVariables);
                     }
                 );
             },    'https://wensink--wenaccept.sandbox.my.site.com/Afspraak'  // Site endpoint
